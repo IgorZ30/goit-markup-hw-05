@@ -628,11 +628,15 @@ font-family: "Roboto", sans-serif;
   outline: none;
   padding: 11px 38px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: border-color,fill;
+  transition-property: border-color;
 }
-.form-input:focus-within + .modal-svg{
+
+.form-input:focus+.modal-svg {
+  fill: #4d5ae5;
+}
+
+.form-input:focus {
   border-color: #4d5ae5;
-fill: #fff;;
 }
 .form-wrapper {
   width: 360px;
@@ -676,6 +680,7 @@ fill: #fff;;
   left: 16px;
   transform: translateY(-50%);
   fill: #2E2F42;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-button {
   font-family: "Roboto", sans-serif;
