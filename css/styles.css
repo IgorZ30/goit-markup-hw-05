@@ -593,9 +593,9 @@ footer {
   border-radius: 50%;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-style: none;
   padding: 0;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 .modal-icon {
@@ -609,6 +609,7 @@ footer {
 .modal-butn:hover,
 .modal-butn:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .modal-butn:hover .modal-icon,
@@ -666,6 +667,9 @@ footer {
   color: #8e8f99;
   margin-bottom: 4px;
 }
+.form-textarea-wrapper{
+  margin-bottom: 16px;
+}
 .form-textarea {
   width: 360px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -682,7 +686,6 @@ footer {
   background-color: transparent;
   resize: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-bottom: 16px;
 }
 .form-textarea:focus {
   border-color: #4d5ae5;
@@ -724,11 +727,7 @@ footer {
 .form-agreement {
   margin-bottom: 24px;
 }
-.checkbox-input:checked + .agreement-label > .agreement-terms {
-  background-color: #404bbf;
-  fill: #f4f4fd;
-  border: none;
-}
+
 .agreement-label {
   display: block;
   margin-bottom: 4px;
@@ -756,6 +755,11 @@ footer {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-input:checked+.agreement-label>.agreement-terms {
+  background-color: #404bbf;
+  fill: #f4f4fd;
+  border: none;
 }
 .policy {
   line-height: 133%;
