@@ -554,10 +554,11 @@ footer {
   left: 0;
   z-index: 2;
   background-color: rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden
 }
-/* Поменяй opacity: 0;
-pointer-events: none;
-visibility: hidden; */
+
 .backdrop.is-open {
   opacity: 1;
   pointer-events: initial;
